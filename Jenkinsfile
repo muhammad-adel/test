@@ -3,7 +3,6 @@ pipeline {
    stages {
       stage ('Build Docker image'){
          agent {
-            docker {
                 dockerfile {
                   filename 'Dockerfile.build'
                   dir 'build'
@@ -15,4 +14,4 @@ pipeline {
 }
       }
    }
-}
+
