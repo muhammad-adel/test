@@ -1,13 +1,10 @@
 pipeline {
    agent none
    stages {
-      stage('Build Docker image') {
-         agent {
-                dockerfile {
-                  filename 'Dockerfile.build'
-                  dir 'build'
+      stage ('Build Docker image') {
+         steps {
+              sh 'docker build -t mygx:latest .'
                 }
 }
       }
    }
-}
