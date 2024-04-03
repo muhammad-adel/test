@@ -1,7 +1,7 @@
 pipeline {
    agent none
    stages {
-      stage (Build Docker iamge){
+      stage ('Build Docker image'){
          agent {
             docker {
                 dockerfile {
